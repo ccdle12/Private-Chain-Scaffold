@@ -118,6 +118,24 @@ Make the script executable
 chmod +x init-new-account.sh
 ```
 
+### Set up the Truffle.js file
+```
+vi truffle.js
+```
+
+Paste the development config
+```
+networks: {
+    development: {
+      host: 'localhost',
+      port: 8545,
+      network_id: "100",
+      gas:4712388,   
+    }
+  }
+```
+
+
 ## Running
 
 ### Run new account script and copy address
