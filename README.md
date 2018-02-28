@@ -58,9 +58,10 @@ cat > genesis.json
 }
 ```
 
+
 Initialize the Genesis Block via the geth cli
 
-Run the first command and then copy the code below
+Run the first command and then paste the code below
 ```
 cat > init-genesis.sh
 ```
