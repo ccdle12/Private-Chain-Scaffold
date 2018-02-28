@@ -16,11 +16,11 @@ Install Truffle via npm
 npm i -g truffle
 ```
 
-## Setup
+## Installation
 
-(Guide to starting from scratch, if you git pull this project, this will be setup)
+(Guide to starting from scratch, if you git pull this project, this will be setup already)
 
-Initialze the Project with Truffle
+# Initialze the Project with Truffle
 
 ```
 truffle init
@@ -59,7 +59,7 @@ cat > genesis.json
 ```
 
 
-Initialize the Genesis Block via the geth cli
+# Initialize the Genesis Block via the geth cli
 
 Run the first command and then paste the code below
 ```
@@ -75,3 +75,59 @@ Make the script executable
 ```
 chmod +x init-genesis.sh
 ```
+
+# Create script to launch Geth Console
+Go back to root folder
+
+```
+cd ../
+```
+
+Create the script to launch geth console
+
+Run the first command and then copy the code below
+```
+cat > geth-console.sh 
+```
+
+```
+#!/bin/bash
+geth --datadir "./data" --rpc --networkid 100 console
+```
+
+Make the script executable
+```
+chmod +x geth-console.sh
+```
+
+# Create script to create new account
+Create the script to launch geth console
+
+Run the first command and then copy the code below
+```
+cat > init-new-account.sh 
+```
+
+```
+#!/bin/bash
+geth --datadir "./data" account new
+```
+
+Make the script executable
+```
+chmod +x init-new-account.sh
+```
+
+## Running
+
+# Run new account script and copy address
+Run script
+```
+./init-new-account.sh
+```
+
+Create a password (remember it)
+Copy Address
+
+Go to data/genesis.json, paste address and replace "<enter new account address here>"
+
