@@ -25,3 +25,52 @@ Initialze the Project with Truffle
 ```
 truffle init
 ```
+
+Create the data directory folder to hold the Private Chain Data
+
+```
+mkdir data
+cd data
+```
+
+Create the Genesis Block using a JSON file
+
+Run the first command and then copy the code below
+```
+cat > genesis.json
+```
+
+```
+{
+    "config": {
+        "chainId": 100,
+        "homesteadBlock": 0,
+        "eip155Block": 0,
+        "eip158Block": 0
+    },
+    "difficulty": "0x0400",
+    "gasLimit": "0x8000000",
+    "alloc": {
+         "<enter new account address here>": {
+		"balance": "30000000000000000000000000"
+	}
+     }
+}
+```
+
+Initialize the Genesis Block via the geth cli
+
+Run the first command and then copy the code below
+```
+cat > init-genesis.sh
+```
+
+```
+#!/bin/bash
+geth -datadir="./data" init-genesis.json
+```
+
+Make the script executable
+```
+chmod +x init-genesis.sh
+```
