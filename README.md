@@ -18,6 +18,8 @@ npm i -g truffle
 
 ## Setup
 
+(Guide to starting from scratch, if you git pull this project, this will be setup)
+
 Initialze the Project with Truffle
 
 ```
