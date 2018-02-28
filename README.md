@@ -132,7 +132,25 @@ networks: {
       network_id: "100",
       gas:4712388,   
     }
-  }
+}
+```
+
+### Create truffle compile and migration script
+Run the first command and then copy the code below
+```
+cat > tcm.sh 
+```
+
+```
+#!/bin/bash
+rm -rf build
+truffle compile
+truffle migrate
+```
+
+Make the script executable
+```
+chmod +x tcm.sh
 ```
 
 
