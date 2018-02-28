@@ -129,5 +129,8 @@ Run script
 Create a password (remember it)
 Copy Address
 
-Go to data/genesis.json, paste address and replace "<enter new account address here>"
+```
+cd ./data
+```
 
+Paste address in "alloc"
